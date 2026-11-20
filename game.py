@@ -1,14 +1,46 @@
 #trivia is a list of dictionary items 
 trivia = [
           { 'question': "Which animal is best adapted to survive in the hot desert?",
-            'answer': 'camel',
-            'options': ['polar bear', 'option b', 'option c', 'correct answer'],
+            'answer': 'Camel',
+            'options': ['Polar bear', 'Camel', 'Penguin', 'Camel'],
           },
-          { 'question': "question body goes here",
-            'answer': 'correct answer',
-            'options': ['option a', 'option b', 'option c', 'correct answer'],
+          { 'question': "Where do polar bears naturally live?",
+            'answer': 'Artic regions',
+            'options': ['Africa', 'South America', 'Arctic regions', 'Artic regions'],
           }
-         ]
+          { 'question': " Which animal is commonly found in tropical rainforests?",
+            'answer': 'Jaguar',
+            'options': ['Jaguar', 'Polar bear', 'Penguin', 'Jaguar'],
+          },
+          { 'question': "Which animal has thick fur to help it survive in extremely cold climates?",
+            'answer': 'Arctic fox',
+            'options': ['Lizard', 'Brown Bear', 'Monkey', 'Arctic fox'],
+          }
+           { 'question': "Where do kangaroos naturally live?",
+            'answer': 'Australia',
+            'options': ['Antarctica', 'Europe', 'North America', 'Australia'],
+          },
+          { 'question': "What helps a polar bear stay warm in freezing temperatures?",
+            'answer': 'Thick fur and a layer of body fat',
+            'options': ['Thin skin', 'Large ears', 'Thick fur and a layer of body fat', 'Thick fur and a layer of body fat'],
+          }
+           { 'question': "Which animal is adapted to living in mountainous regions with cold temperatures?",
+            'answer': 'Snow leopard',
+            'options': ['Snow leopard', 'Seahorse', 'Flamingo', 'Snow leopard'],
+          },
+          { 'question': "Which animal is native to the Himalayan mountain range?",
+            'answer': 'Snow leopard',
+            'options': ['Kangaroo', 'Giraffe', 'Snow leopard', 'Snow leopard'],
+          }
+             { 'question': "Which animal is adapted to life in the African desert?",
+            'answer': 'correct answer',
+            'options': ['Lizard', 'Moose', 'Penguin', 'Fennec fox'],
+          },
+          { 'question': " Why do many animals in cold climates have smaller ears and shorter limbs?",
+            'answer': 'conserve body heat',
+            'options': ['To conserve body heat', 'To attract predators', 'To help them swim', 'conserve body heat'],
+          }
+        ]
 
 def ask_question(question, options, answer): 
     print(question)
