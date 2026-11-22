@@ -2,7 +2,7 @@
 trivia = [
           { 'question': "Which animal is best adapted to survive in the hot desert?",
             'answer': 'Camel',
-            'options': ['Polar bear', 'Camel', 'Penguin', 'Camel'],
+            'options': ['Polar bear', 'Camel', 'Penguin', 'Snake'],
           },
            { 'question': "Where do polar bears naturally live?",
             'answer': 'Artic regions',
@@ -57,19 +57,61 @@ def ask_question(question, options, answer):
     else:
         return False
 
+    # Function to calculate the percentage score
+def calculate_score(total_questions, num_correct):
+    score = (num_correct / total_questions) * 100
+    return score
+
 def main():
-    print("Starting a new Animal Trivia game...")
-    user_name = input("Enter your name: ")
-    print(f"Welcome, {user_name}!")
-    #going to call the ask question function in main 
-    for item in trivia:
-        current_question=item['question']
-        current_options=item['options']
-        current_answer=item['answer']
-        is_correct = ask_question(current_question,current_options,current_answer)
-        print(is_correct) #see if answer was right
+   print("Starting a new Animal Trivia game...")
+user_name = input("Enter your name: ")
+print(f"Welcome, {user_name}!")
+
+    # Initialize the score
+num_correct = 0
+
+    # Going to call the ask question function in main
+    # for item in trivia:
+current_question = item['question']
+current_options = item['options']
+current_answer = item['answer']
+is_correct = ask_question(current_question, current_options, current_answer)
+
+print(is_correct)
+
+if is_correct:
+            num_correct += 1
+            print("Correct!")
+else:
+            print("Incorrect!")
+
+    # Calculate the final score
+total_questions = len(trivia)
+final_score = calculate_score(total_questions, num_correct)
+
+print("\nQuiz Complete!")
+print("You got", num_correct, "out of", total_questions, "correct.")
+print("Your final score is:", final_score, "%")
+
+if final_score == 100:
+        print("Excellent! You got every question correct!")
+elif final_score >= 80:
+        print("Great job! You know a lot about animals!")
+elif final_score >= 60:
+        print("Good effort! Keep learning!")
+else:
+        print("Keep practicing! You can improve your score next time!")
 
 
 
+        main()
+        num_correct = 0
+if is_correct:
+      num_correct += 1
 
-main()
+def calculate_score(total_questions, num_correct):
+  score = (num_correct / total_questions) * 100
+  return score
+
+
+  
