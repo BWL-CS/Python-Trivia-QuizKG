@@ -6,11 +6,11 @@ trivia = [
           },
            { 'question': "Where do polar bears naturally live?",
             'answer': 'Artic regions',
-            'options': ['Africa', 'South America', 'Arctic regions', 'Artic regions'],
+            'options': ['Africa', 'South America', 'Arctic regions', 'Desert Region'],
            },
           { 'question': " Which animal is commonly found in tropical rainforests?",
             'answer': 'Jaguar',
-            'options': ['Jaguar', 'Polar bear', 'Penguin', 'Jaguar'],
+            'options': ['Jaguar', 'Polar bear', 'Penguin', 'Snake'],
           },
           { 'question': "Which animal has thick fur to help it survive in extremely cold climates?",
             'answer': 'Arctic fox',
@@ -22,15 +22,15 @@ trivia = [
           },
           { 'question': "What helps a polar bear stay warm in freezing temperatures?",
             'answer': 'Thick fur and a layer of body fat',
-            'options': ['Thin skin', 'Large ears', 'Thick fur and a layer of body fat', 'Thick fur and a layer of body fat'],
+            'options': ['Thin skin', 'Large ears', 'Thick fur and a layer of body fat', 'Its teeth'],
           },
            { 'question': "Which animal is adapted to living in mountainous regions with cold temperatures?",
             'answer': 'Snow leopard',
-            'options': ['Snow leopard', 'Seahorse', 'Flamingo', 'Snow leopard'],
+            'options': ['Snow leopard', 'Seahorse', 'Flamingo', 'Goat'],
           },
           { 'question': "Which animal is native to the Himalayan mountain range?",
             'answer': 'Snow leopard',
-            'options': ['Kangaroo', 'Giraffe', 'Snow leopard', 'Snow leopard'],
+            'options': ['Kangaroo', 'Giraffe', 'Snow leopard', 'Ram'],
           },
              { 'question': "Which animal is adapted to life in the African desert?",
             'answer': 'Fennec Fox',
@@ -38,7 +38,7 @@ trivia = [
           },
           { 'question': " Why do many animals in cold climates have smaller ears and shorter limbs?",
             'answer': 'conserve body heat',
-            'options': ['To conserve body heat', 'To attract predators', 'To help them swim', 'conserve body heat'],
+            'options': ['To conserve body heat', 'To attract predators', 'To help them swim'],
           },
       ]
 
@@ -72,10 +72,11 @@ num_correct = 0
 
     # Going to call the ask question function in main
     # for item in trivia:
-current_question = item['question']
-current_options = item['options']
-current_answer = item['answer']
-is_correct = ask_question(current_question, current_options, current_answer)
+for item in trivia:
+  current_question = item['question']
+  current_options = item['options']
+  current_answer = item['answer']
+  is_correct = ask_question(current_question, current_options, current_answer)
 
 print(is_correct)
 
